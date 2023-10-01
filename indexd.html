@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Form</title>
+</head>
+<body>
+    <h1>Donation Form</h1>
+    <form action="/donate" method="POST">
+        <label for="donorName">Donor Name:</label>
+        <input type="text" id="donorName" name="donorName" required><br><br>
+        
+        <label for="donorEmail">Donor Email:</label>
+        <input type="email" id="donorEmail" name="donorEmail" required><br><br>
+        
+        <label for="donorPhone">Donor Phone:</label>
+        <input type="tel" id="donorPhone" name="donorPhone" required><br><br>
+        
+        <label for="donorPAN">Donor PAN Number:</label>
+        <input type="text" id="donorPAN" name="donorPAN" required><br><br>
+        
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required><br><br>
+        
+        <label for="purpose">Purpose of Donation:</label>
+        <select id="purpose" name="purpose">
+            <option value="general">General</option>
+            <option value="hospital">Hospital Cost</option>
+            <option value="free-care">Free Care</option>
+        </select><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <script type="text/javascript" src="scriptd.js"></script>
+
+<script>
+        document.getElementById('donationForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('/donate', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    const result = await response.text();
+                    document.getElementById('response').innerHTML = result;
+                } else {
+                    console.error('Error submitting the form.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+
+</body>
+</html>

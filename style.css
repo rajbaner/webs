@@ -1,0 +1,954 @@
+/* styles.css */
+
+/* Style the body or container */
+
+.top-bar {
+    background-color: #008080; /* Teal color for the top bar */
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+     top: 0; /* Place the top bar at the top of the viewport */
+    left: 0; /* Align the top bar with the left edge */
+    right: 0; /* Fixed position to keep it at the top */
+    width: 100%; /* Full width */
+    z-index: 1000;
+}
+
+.contact-info {
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icons a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive adjustments for the top bar */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .contact-info {
+        margin-bottom: 10px;
+    }
+
+    .icons {
+        margin-top: 10px;
+    }
+}
+
+
+
+/* Your existing media query for responsive design */
+
+
+/*navbar*/
+
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Decorated Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #008080; /* Teal color for healthcare */
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #005555; /* Darker teal border at the bottom */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add relative positioning */
+    z-index: 2;
+    padding: 50px 10px 2px;
+    height: 10%; /* Set the width of the navbar as a percentage */
+    margin: 0 auto;
+    position: sticky; /* Make the navbar sticky */
+    top: 0;
+}
+
+.navbar-logo img {
+    height: 40px; /* Adjust logo height as needed */
+    margin-bottom: 10px;
+    
+}
+
+
+.main-menu {
+    display: flex;
+    list-style: none;
+    max-width: 100%;
+    flex-wrap:wrap;
+}
+
+.arrow{
+    margin-top: 5.2px;
+}
+.main-menu li {
+    margin-right: 20px;
+    position: relative;
+    white-space: nowrap;
+    flex: 1;
+    max-width: calc(100% - 20px);
+}
+
+.main-menu li a{
+    position: relative; /* Add relative positioning for animation */
+    text-decoration: none; /* Remove default underline */
+    color: #fff;
+     padding-right: 20px;
+     justify-content: space-between;
+     transition: background-color 0.3s, transform 0.3s;
+}
+.main-menu li a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Adjust the position to control the underline appearance */
+    left: 0;
+    width: 50%; /* Start with half width */
+    height: 2px;
+    background-color: #ffcc00; /* Initial color of the animated bar */
+    transition: width 0.3s ease, background-color 0.3s ease; /* Add smooth transitions */
+    transform-origin: 0 50%; /* Set the origin to left for scaling effect */
+    transform: scaleX(0); /* Initially scale the underline to zero width */
+}
+
+.navbar-menu .active {
+    color: palegreen; /* Change color for the active menu item */
+}
+
+.main-menu li a:hover::before {
+    width: 100%; /* Expand the bar to full width on hover */
+    background-color: #ffcc00; /* Change background color on hover */
+    transform: scaleX(1); /* Scale the underline to full width */
+    transition: width 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Add smooth transitions */
+}
+
+.main-menu li:last-child {
+    margin-right: 0;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+    font-size: 16px; /* Slightly larger font size */
+    font-weight: bold; /* Bold text */
+}
+.arrow {
+    
+  position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 1; /* Hide arrow icon by default */
+    transition: opacity 0.3s;
+}
+
+.submenu:hover .arrow {
+    opacity: 0; /* Show arrow icon on submenu hover */
+}
+.main-menu a:hover {
+    color: #ffcc00;
+}
+
+/* Submenu Styles */
+.submenu .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: auto;
+    border-top: 2px solid #008080; /* Teal border at the top */
+}
+
+.submenu:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    margin: 8px 0;
+    padding: 5px 0; 
+    white-space: nowrap;
+}
+
+.sub-menu a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Content Section Styles (No changes from previous code) */
+
+
+/* Content Section Styles */
+.content {
+    margin-top: 70px;
+    padding: 20px;
+}
+
+
+/* Media Query for Responsive Design */
+@media (max-width: 1072px) {
+    .navbar {
+        margin-top: 20px; /* Add margin to create space below the top bar on smaller screens */
+    }
+
+    .main-menu {
+        margin-top: 30px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+
+    }
+    .main-menu li a .arrow {
+        display: inline; /* Show arrow icon in smaller screens */
+    }
+    .submenu .sub-menu {
+/*        position: static; /* Reset submenu positioning */*/
+        display: none;
+        /*background-color: #333;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        width: auto;
+        border-top: 2px solid #008080; 
+        margin-left: 20px;*//* Teal border at the top */
+    }
+
+    .submenu:hover .sub-menu {
+        position: static;
+        display: block;
+        background-color: #333;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        width: auto;
+        border-top: 2px solid #008080; 
+        margin-left: 20px; /* Hide sub-menu items when submenu is not hovered */
+    }
+
+    .main-menu.active {
+        display: flex;
+    }
+
+    .main-menu li {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .bar:first-child.active {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .bar:nth-child(2).active {
+        opacity: 0;
+    }
+
+    .bar:last-child.active {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+/* styles.css */
+
+/* ... (previous styles) ... */
+
+/* Style the intro section */
+.intro-container {
+    background-color: #00bcd4;
+    color: teal;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    animation: slideIn 1s ease; /* Apply the slide-in animation */
+}
+
+/* Style the text and link within the intro section */
+.intro-text {
+    text-align: center;
+     flex-grow: 1;
+}
+/* styles.css */
+
+/* ... (previous styles) ... */
+
+/* Style the hidden class */
+.hidden {
+    display: none;
+}
+#read-more{
+    font-weight: bolder;
+    color:#6edce6;
+    background-color: black;
+    border-radius: 50px;
+}
+.reads{
+    background-color: aliceblue;
+    border-radius: 50px;
+}
+.intro-text h2 {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.intro-text a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Define the slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+/* styles.css */
+
+/* ... (previous styles) ... */
+
+/* Style the new intro section */
+.right-transition {
+    background: linear-gradient(to right, #3AA0A1, #F097A7);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    animation: slideInFromRight 1s ease; /* Apply the right-slide-in animation */
+}
+.right-transition .intro-text {
+    text-align: left; /* Align text to the left */
+}
+
+/* Define the right-slide-in animation */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+/* styles.css */
+
+/* ... (previous styles) ... */
+
+/* Style the new intro section */
+.left-transition {
+  background: linear-gradient(to left, #3AA0A1, #FFA07A);
+
+
+    color: #fff;
+    padding: 20px;
+    display: flex;
+   align-items: center;
+    animation: slideInFromLeft 1s ease; /* Apply the left-slide-in animation */
+}
+
+/* Style the text and link within the new intro section */
+.left-transition .intro-text {
+    text-align: center; /* Align text to the left */
+}
+
+/* Define the left-slide-in animation */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.right-transition2{
+
+  background: linear-gradient(to bottom, #3AA0A1, #f08dab);
+
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    animation: slideInFromRight 1s ease; /* Apply the right-slide-in animation */
+}
+.right-transition2 .intro-text {
+    text-align: left; /* Align text to the left */
+}
+
+/* Define the right-slide-in animation */
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #c9a1d6; /* Replace with your 3D graphic image */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.animated-text {
+    font-size: 36px;
+    color: lightcoral;
+    animation: animateText 5s linear infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes animateText {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Gallery container styles */
+.gallery {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f08dab;
+}
+
+.gallery {
+    width: 100%;
+    max-width: 2000px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Carousel styles */
+.carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    perspective: 1000px;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden; /* Ensure images within the carousel are not hidden */
+}
+ .galtextt{
+    color: pink;
+}
+/* Scroll container for horizontal scrolling */
+.scroll-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    width: 100%; /* Ensure the container takes the full width */
+}
+
+/* Individual image styles */
+.image {
+    flex: 0 0 auto;
+    min-width: 200px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover effect for images */
+.image:hover {
+    transform: rotateY(20deg);
+}
+
+/* Icon styles */
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image:hover .icon {
+    opacity: 1;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    text-align: center;
+}
+
+.modal img {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .carousel {
+        flex-wrap: nowrap; /* Disable wrapping for horizontal scrolling */
+    }
+    .scroll-container {
+        flex-wrap: nowrap; /* Ensure images are displayed in a row */
+    }
+    .image {
+         flex: 0 0 calc(100% - 10px);
+        min-width: 20%; 
+        margin: 0 20px 20px 0;/* Adjust the width as needed for smaller screens */
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 769px) {
+    .carousel {
+        flex-wrap: wrap; /* Enable wrapping for larger screens */
+    }
+    .scroll-container {
+        display: flex; /* Revert to default display for larger screens */
+         overflow-x: auto; /* Enable horizontal scrolling */
+    width: 100%;/* Disable horizontal scrolling for larger screens */
+    }
+    .image {
+        flex: 0 0 calc(50% - 20px); /* 5 images per row with some gap */
+        margin: 0 20px 20px 0; /* Add some margin for spacing between images */
+    }
+}
+/*5*/
+/* styles.css */
+
+/* Style the Meet Our Team section */
+.meet-our-team-section {
+    text-align: center;
+    padding: 40px;
+   background: linear-gradient(to top, #33a6a6, #f08dab); /* Teal background color */
+    color: #fff; /* White text color */
+}
+
+.meet-our-team-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Spacing between team members */
+}
+
+.team-member {
+    position: relative;
+    width: 220px; /* Set the width of each team member card */
+    perspective: 1000px; /* Add 3D perspective */
+    transition: transform 0.5s; /* Smooth transition for 3D effect */
+}
+
+.team-member:hover {
+    transform: rotateY(10deg); /* Rotate on hover for 3D effect */
+}
+
+.member-image {
+    overflow: hidden;
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Add shadow */
+}
+
+.member-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.member-info {
+    text-align: center;
+}
+
+.member-info h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.member-info p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .team-member {
+        width: calc(50% - 20px); /* Display two members per row on smaller screens */
+    }
+}
+
+.careerform{
+    text-align: center;
+    background: linear-gradient(to bottom, #33a6a6, #FFBD6A);
+}
+.c1{
+text-decoration: none;
+}
+
+/* Style the form container */
+.form-container {
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   background-image: url('https://images.pexels.com/photos/2589456/pexels-photo-2589456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:1400px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2489px;}
+
+}
+
+
+
+.center
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(75, 75, 250, 0.3);
+  border-radius: 3px;
+}
+.center h1{
+  text-align:center;
+  color:white;
+  font-family: 'Source Code Pro', monospace;
+  text-transform:uppercase;
+}
+
+/* Style form labels */
+label {
+    font-weight: bold;
+}
+
+/* Style form inputs and textareas */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style the file input */
+input[type="file"] {
+    border: none;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    align-items: center; 
+    margin-top: 10px; 
+    margin-left: 600px;
+}
+
+/* Style the submit button on hover */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 768px) {
+    .form-container {
+        max-width: 100%; /* Full width on small screens */
+    }
+    input[type="submit"] {
+        margin-left: 100px;
+    }
+}
+
+.social-stickers {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+}
+
+.social-button {
+    background-color: teal;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-button i {
+    font-size: 20px;
+}
+
+.social-button:hover {
+    background-color: #007bff;
+    transform: scale(1.1);
+}
+
+.contact-section {
+margin-top: 10px;
+    background-color: teal;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-details {
+    flex: 1;
+}
+
+.contact-details h2,
+.social-links h2 {
+    font-size: 34px;
+    color: #333;
+}
+
+.contact-details p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-details i,
+.social-icon i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #007BFF;
+}
+
+.social-links {
+    top: 20px;
+    flex: 1;
+    text-align: right;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #0056b3;
+}
+
+/*Transforming Lives*/
+ .scrolling-section {
+        /* Adjust the height as needed */
+            position: relative;
+            margin-top: 20px;
+            width: 100%;
+            height: auto; /* Allow content to expand vertically */
+            overflow-x: scroll; /* Enable horizontal scrolling */
+            white-space: nowrap;
+
+        }
+
+        .box {
+            width: 300px; /* Adjust the box width as needed */
+            margin: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: inline-block;
+            vertical-align: top;
+            max-height: 200px;
+            white-space: wrap;
+        }
+
+        .box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .box h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            position: relative;
+            white-space: wrap;
+        }
+
+        .box h2::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: #007bff; /* Adjust the underline color as needed */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            white-space: wrap;
+        }
+
+        .box p {
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+
+        /* Animation */
+        .scrolling-section .box {
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }

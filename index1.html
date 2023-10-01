@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="style2.css" as="style">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.0.1/css/ionicons.min.css"> <!-- Include Ionicons CSS -->
+
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<title></title>
+
+</head>
+<body>
+   <div class="top-bar">
+        <div class="contact-info">
+            <span class="phone">Phone: +123456789</span>
+        </div>
+        <div class="icons">
+            <a href="#"><ion-icon name="medkit"></ion-icon></a> <!-- Ambulance Icon -->
+            <a href="#"><i class="ion-md-medical"></i></a> <!-- Medical Icon -->
+            <a href="#"><i class="ion-md-clipboard"></i></a> <!-- Clipboard Icon (example) -->
+        </div>
+    </div>
+<nav class="navbar">
+        <div class="navbar-logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="navbar-menu">
+            <ul class="main-menu">
+                 <li class="active"><a href="http://localhost:3000/index1.html" style="color: pink">Home</a></li>
+                <li><a href="http://localhost:3000/services">Services</a></li>
+                <li class="submenu">
+                    <a href="http://localhost:8080/form.html">About Us<span class="arrow">&#9660;</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="http://localhost:8080/form.html#form-section">Who Are We?</a></li>
+                        <li><a href="http://localhost:8080/form.html#wwdt">Why We Do This</a></li>
+                        <li><a href="http://localhost:8080/form.html#Hwchy">How We Can Help You</a></li>
+                        <li><a href="http://localhost:8080/form.html#Hych">How You Can Help</a></li>
+                        <li><a href="http://localhost:8080/form.html#Wci">World Class Infrastructure</a></li>
+                        <li><a href="http://localhost:8080/form.html#Team">Team</a></li>
+                        <li><a href="http://localhost:8080/form.html#form">Career</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="http://localhost:8080/newsandblogs">News And Events<span class="arrow">&#9660;</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://localhost:8080/volunteer">Donations</a></li>
+                <li><a href="http://localhost:8080/successstories">Success Stories</a></li>
+                <li><a href="http://localhost:3000/index.html">Book Appoinments</a></li>
+            </ul>
+        </div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2 -->
+      <div class="slider-container">
+        <div class="slider">
+            <div class="slide" style="background-image: url('slide1.jpg');">
+                <div class="slide-content">
+                    <h2>Slide 1</h2>
+                    <p>Text for Slide 1</p>
+                    <button>Button 1</button>
+                    <button>Button 2</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('slide1bg.jpg');">
+                <div class="slide-content">
+                    <h2>Slide 2</h2>
+                    <p>Text for Slide 2</p>
+                    <button>Button 1</button>
+                </div>
+            </div>
+            <!-- Add more slides as needed -->
+            <div class="slide" style="background-image: url('image2.jpg');">
+                <div class="slide-content">
+                    <h2>Slide 2</h2>
+                    <p>Text for Slide 2</p>
+                    <button>Button 1</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('image2.jpg');">
+                <div class="slide-content">
+                    <h2>Slide 2</h2>
+                    <p>Text for Slide 2</p>
+                    <button>Button 1</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('image2.jpg');">
+                <div class="slide-content">
+                    <h2>Slide 2</h2>
+                    <p>Text for Slide 2</p>
+                    <button>Button 1</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('image2.jpg');">
+                <div class="slide-content">
+                    <h2>Slide 2</h2>
+                    <p>Text for Slide 2</p>
+                    <button>Button 1</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('image2.jpg');">
+                <div class="slide-content">
+                    <h2>Slide 2</h2>
+                    <p>Text for Slide 2</p>
+                    <button>Button 1</button>
+                </div>
+            </div>
+        </div>
+        <button class="prev-slide">&#10094;</button>
+        <button class="next-slide">&#10095;</button>
+        <div class="slider-dots"></div>
+    </div>
+    <section class="services">
+  <h1 class="section-title">Our Services</h1>
+    <div class="wrapper">
+        <div class="carousel-container">
+            <div class="cards-wrapper">
+                <div class="card">
+                    <div class="img"><img src="Baby Birth.gif" alt="img" draggable="false"></div>
+                    <h2>Birth Defect Reconstruction</h2>
+                    <span>Sales Manager</span>
+                    <a href="#" class="expand-btn">+</a>
+                </div>
+                <!-- Add more card items here -->
+                <div class="card">
+                    <div class="img"><img src="Breathing exercise.gif" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Sales Manager</span>
+                    <a href="#" class="expand-btn">+</a>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="Skincare.gif" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Sales Manager</span>
+                    <a href="#" class="expand-btn">+</a>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="First aid kit.gif" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Sales Manager</span>
+                    <a href="#" class="expand-btn">+</a>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="Hand holding pen.gif" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Sales Manager</span>
+                    <a href="#" class="expand-btn">+</a>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="Stem-cell research.gif" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Sales Manager</span>
+                    <a href="#" class="expand-btn">+</a>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="Veterinary.gif" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Sales Manager</span>
+                    <a href="#" class="expand-btn">+</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+
+<!-- More Of Our Services -->
+<h1 class="section-title2">Support Services</h1>
+<section class="supportservices">
+    <div class="wrapper">
+        <div class="carousel-container">
+            <div class="cards-wrapper">
+                <div class="card">
+                    <div class="img"><img src="Medical prescription.gif" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Sales Manager</span>
+                    <a href="#" class="expand-btn">+</a>
+                </div>
+                <!-- Add more card items here -->
+                <div class="card">
+                    <div class="img"><img src="Pediatrician.gif" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Sales Manager</span>
+                    <a href="#" class="expand-btn">+</a>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="Medicine.gif" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Sales Manager</span>
+                    <a href="#" class="expand-btn">+</a>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="Phisiotherapy.gif" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Sales Manager</span>
+                    <a href="#" class="expand-btn">+</a>
+                </div>
+                <div class="card">
+                    <div class="img"><img src="Autism.gif" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Sales Manager</span>
+                    <a href="#" class="expand-btn">+</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+        
+    </div>
+</section>
+
+<div class="scrolling-section">
+        <div class="box">
+            <img src="image1.jpg" alt="Image 1">
+            <h2>Heading 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="box">
+            <img src="image2.jpg" alt="Image 2">
+            <h2>Heading 2</h2>
+            <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        </div>
+        <!-- Add more boxes as needed -->
+        <div class="box">
+            <img src="image2.jpg" alt="Image 2">
+            <h2>Heading 2</h2>
+            <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        </div>
+        <div class="box">
+            <img src="image2.jpg" alt="Image 2">
+            <h2>Heading 2</h2>
+            <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        </div>
+        <div class="box">
+            <img src="image2.jpg" alt="Image 2">
+            <h2>Heading 2</h2>
+            <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        </div>
+        <div class="box">
+            <img src="image2.jpg" alt="Image 2">
+            <h2>Heading 2</h2>
+            <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        </div>
+    </div>
+
+
+<div class="container">
+        <div class="left-part">
+            <img src="sbg.jpg" alt="Teal Background Image">
+        <div class="image-text">
+            <h2>Welcome to Our Medical Center</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget felis sit amet libero tincidunt malesuada.</p>
+        </div>
+        <div class="right-part">
+            <!-- Department boxes -->
+            <div class="department-box">
+                <div class="department-symbol">+</div>
+                <div class="stethoscope-icon">🩺</div>
+                <div class="department-name">Neurology</div>
+                <div class="department-description">Lorem ipsum dolor sit amet.</div>
+            </div>
+            <div class="department-box">
+                <div class="department-symbol">+</div>
+                <div class="stethoscope-icon">👁️</div>
+                <div class="department-name">Ophthalmology</div>
+                <div class="department-description">Consectetur adipiscing elit.</div>
+            </div>
+            <div class="department-box">
+                <div class="department-symbol">+</div>
+                <div class="stethoscope-icon">❤️</div>
+                <div class="department-name">Cardiology</div>
+                <div class="department-description">Sed eget felis sit amet libero.</div>
+            </div>
+            <div class="department-box">
+                <div class="department-symbol">+</div>
+                <div class="stethoscope-icon">🔪</div>
+                <div class="department-name">Surgical</div>
+                <div class="department-description">Tincidunt malesuada.</div>
+            </div>
+            <div class="department-box">
+                <div class="department-symbol">+</div>
+                <div class="stethoscope-icon">💉</div>
+                <div class="department-name">Implantation</div>
+                <div class="department-description">Lorem ipsum dolor sit amet.</div>
+            </div>
+            <div class="department-box">
+                <div class="department-symbol">+</div>
+                <div class="stethoscope-icon">🔍</div>
+                <div class="department-name">X-Ray</div>
+                <div class="department-description">Consectetur adipiscing elit.</div>
+            </div>
+            <div class="department-box">
+                <div class="department-symbol">+</div>
+                <div class="stethoscope-icon">🧲</div>
+                <div class="department-name">Nuclear Magnetic</div>
+                <div class="department-description">Sed eget felis sit amet libero.</div>
+            </div>
+            <div class="department-box">
+                <div class="department-symbol">+</div>
+                <div class="stethoscope-icon">💥</div>
+                <div class="department-name">Traumatology</div>
+                <div class="department-description">Tincidunt malesuada.</div>
+            </div>
+            <div class="department-box">
+                <div class="department-symbol">+</div>
+                <div class="stethoscope-icon">🧪</div>
+                <div class="department-name">Laboratory Tests</div>
+                <div class="department-description">Lorem ipsum dolor sit amet.</div>
+            </div>
+            <div class="department-box">
+                <div class="department-symbol">+</div>
+        <div class="stethoscope-icon">🧬</div>
+        <div class="department-name">Genetics</div>
+        <div class="department-description">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <div class="department-box">
+        <div class="department-symbol">+</div>
+        <div class="stethoscope-icon">🌡️</div>
+        <div class="department-name">Temperature Control</div>
+        <div class="department-description">Consectetur adipiscing elit.</div>
+    </div>
+    <div class="department-box">
+        <div class="department-symbol">+</div>
+        <div class="stethoscope-icon">💊</div>
+        <div class="department-name">Pharmacy</div>
+        <div class="department-description">Sed eget felis sit amet libero.</div>
+    </div>
+        </div>
+    </div>
+
+
+
+
+<section class="stickystickers">
+  <div class="social-stickers">
+    <a href="https://www.instagram.com/" target="_blank" class="social-button instagram">
+        <i class="fab fa-instagram"></i>
+       
+    </a>
+    <a href="https://web.whatsapp.com/" target="_blank" class="social-button whatsapp">
+        <i class="fab fa-whatsapp"></i>
+       
+    </a>
+    <a href="https://twitter.com/" target="_blank" class="social-button twitter">
+        <i class="fab fa-twitter"></i>
+        
+    </a>
+</div>
+    </div>
+</section>
+<section class="contact-section">
+        <div class="contact-details">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, please feel free to reach out to us:</p>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> 123 Hospital Street, City, Country</li>
+                <li><i class="fas fa-phone"></i> <a href="tel:+123456789">123-456-789</a></li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:info@hospital.com">info@hospital.com</a></li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <h2>Connect with Us</h2>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+<script type="text/javascript" src="script1.js"></script>
+</body>
+</html>
